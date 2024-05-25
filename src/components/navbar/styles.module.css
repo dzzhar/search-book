@@ -1,0 +1,41 @@
+.navbar {
+  padding: 2rem 0;
+}
+
+.navbar__mobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__brand {
+  width: 5rem;
+}
+
+.navbar__list {
+  display: none;
+}
+
+.list__open {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar__toggle {
+    display: none;
+  }
+
+  .navbar__list {
+    display: block;
+  }
+}

@@ -1,0 +1,17 @@
+/* font display */
+@import url("https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap");
+
+/* css reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+/* style guide */
+:root {
+  /* --background-color: ; */
+  --primary-color: #074173;
+  --secondary-color: #1e1e1e;
+}

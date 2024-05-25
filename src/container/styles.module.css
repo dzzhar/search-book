@@ -1,0 +1,12 @@
+.container {
+  padding: 0 2rem;
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 80%;
+    margin: auto;
+    padding: 0;
+    max-height: 100vh;
+  }
+}

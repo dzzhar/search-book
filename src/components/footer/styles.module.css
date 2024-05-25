@@ -1,0 +1,11 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer__author {
+  font-weight: normal;
+  color: var(--primary-color);
+}
