@@ -1,12 +1,14 @@
 .container {
   padding: 0 2rem;
+  height: 100%;
 }
 
 @media (min-width: 992px) {
   .container {
-    width: 80%;
+    width: 1020px;
     margin: auto;
     padding: 0;
-    max-height: 100vh;
+    max-height: 100vw;
+    max-width: 80%;
   }
 }

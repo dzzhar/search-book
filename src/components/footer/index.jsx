@@ -18,7 +18,7 @@ const Navbar = () => {
             <a href="">
               <box-icon
                 type="logo"
-                name="linkedin-square"
+                name="linkedin"
                 color="var(--primary-color)"
               />
             </a>
