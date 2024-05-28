@@ -1,5 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useEffect, useState } from "react";
-import API_URL from "../../utils/api/books";
 import styles from "./styles.module.css";
 import { Link } from "react-router-dom";
 
@@ -8,23 +8,21 @@ const Hero = () => {
 
   useEffect(() => {
     const fetchRandomImage = async () => {
-      try {
-        const response = await fetch(API_URL);
-        const data = await response.json();
+      const response = await fetch(
+        `https://example-data.draftbit.com/books?_limit=50`
+      );
+      const data = await response.json();
 
-        if (response.ok && data.length > 0) {
-          const randomIndex = Math.floor(Math.random() * data.length);
-          const selectedImage = data[randomIndex];
-          setRandomImage(selectedImage.image_url);
-        } else {
-          throw new Error("No images found");
-        }
-      } catch (err) {
-        return err;
+      if (response.ok && data.length > 0) {
+        const randomIndex = Math.floor(Math.random() * data.length);
+        const selectedImage = data[randomIndex];
+        setRandomImage(selectedImage.image_url);
+      } else {
+        throw new Error("No images found");
       }
     };
 
-    const intervalId = setInterval(fetchRandomImage, 2000);
+    const intervalId = setInterval(fetchRandomImage, 1000);
 
     return () => clearInterval(intervalId);
   }, []);

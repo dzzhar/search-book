@@ -15,3 +15,15 @@
   margin-bottom: 5rem;
   gap: 1rem;
 }
+
+.book__link {
+  text-decoration: none;
+  color: var(--primary-color);
+  width: 180px;
+}
+
+@media (min-width: 768px) {
+  .book__link {
+    width: 200px;
+  }
+}

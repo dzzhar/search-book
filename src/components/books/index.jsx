@@ -1,21 +1,22 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
-import API_URL from "../../utils/api/books";
 import Book from "../book";
 import styles from "./styles.module.css";
-import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Books = () => {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    axios
-      .get(API_URL)
-      .then((res) => {
-        setBooks(res.data);
-      })
-      .catch((err) => {
-        return err;
-      });
+    const fetchData = async () => {
+      const result = await fetch(
+        `https://example-data.draftbit.com/books?_limit=20`
+      );
+      const data = await result.json();
+      setBooks(data);
+    };
+
+    fetchData();
   }, []);
 
   return (
@@ -24,12 +25,19 @@ const Books = () => {
       <div className={styles.book__section}>
         {books.map((book) => {
           return (
-            <Book
-              key={book.id}
-              title={book.title}
-              author={book.authors}
-              image={book.image_url}
-            />
+            <>
+              <Link
+                to={`/pages/detail/${book.id}`}
+                className={styles.book__link}
+              >
+                <Book
+                  key={book.id}
+                  title={book.title}
+                  author={book.authors}
+                  image={book.image_url}
+                />
+              </Link>
+            </>
           );
         })}
       </div>

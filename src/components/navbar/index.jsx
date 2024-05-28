@@ -32,6 +32,7 @@ const Navbar = () => {
           <List list="about" to="/pages/about" />
           <List list="books" to="/pages/books" />
           <List list="top 100" to="/pages/top" />
+          {/* <List list="detail" to="/pages/detail" /> */}
         </div>
       </div>
     </>

@@ -1,14 +1,30 @@
 .book {
   margin-bottom: 2rem;
-  height: 80%;
-  flex-basis: 20%;
+  flex-basis: 45%;
 }
 
 .book img {
   margin-bottom: 1rem;
-  width: 100%;
+  width: 180px;
   height: 280px;
   object-fit: fill;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2));
+}
+
+.book img:hover {
+  transform: scale(1.05);
+}
+
+.book__like {
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+}
+
+.book__like box-icon {
+  cursor: pointer;
 }
 
 .book h3 {
@@ -20,14 +36,19 @@
   font-size: 1.2rem;
 }
 
-.book h3,
-.book p {
-  width: 180px;
+@media (min-width: 768px) {
+  .book {
+    flex-basis: 25%;
+  }
+
+  .book img {
+    width: 200px;
+    height: 300px;
+  }
 }
 
-@media (min-width: 768px) {
-  .book h3,
-  .book p {
-    width: 200px;
+@media (min-width: 992px) {
+  .book {
+    flex-basis: 20%;
   }
 }
