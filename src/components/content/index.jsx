@@ -11,7 +11,7 @@ const Content = (props) => {
           <div className={styles.section__sub}>
             <p>{subtitle}</p>
             <div className={styles.icons}>
-              <a href="">
+              <a target="_blank" href="https://github.com/dzzhar">
                 <box-icon
                   type="logo"
                   name="github"
@@ -19,7 +19,10 @@ const Content = (props) => {
                   size="sm"
                 />
               </a>
-              <a href="">
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/zharifahdzikra"
+              >
                 <box-icon
                   type="logo"
                   name="linkedin"
@@ -27,7 +30,7 @@ const Content = (props) => {
                   size="sm"
                 />
               </a>
-              <a href="">
+              <a target="_blank" href="https://instagram.com/zharifahdzikra">
                 <box-icon
                   type="logo"
                   name="instagram-alt"
@@ -35,7 +38,7 @@ const Content = (props) => {
                   size="sm"
                 />
               </a>
-              <a href="">
+              <a target="_blank" href="https://medium.com/@zharifahdzikra">
                 <box-icon
                   type="logo"
                   name="medium-square"
