@@ -53,36 +53,50 @@ const DetailBook = () => {
           <h3>{description}</h3>
 
           <div className={styles.detail__metadata}>
-            <span className={styles.metadata__left}>
-              <p>Edition</p>
-              <p>Genre</p>
-              <p>Pages</p>
-              <p>Format</p>
+            <span className={styles.metadata__props}>
+              <p className={styles.metadata__name}>Edition</p>
+              <p className={styles.metadata__value}>
+                {edition ? edition : "No Data Information"}
+              </p>
             </span>
-            <span className={styles.metadata__right}>
-              <p>{edition ? edition : "No Data Information"}</p>
-              <p>{genres}</p>
-              <p>{num_pages}</p>
-              <p>{format}</p>
+            <span className={styles.metadata__props}>
+              <p className={styles.metadata__name}>Genre</p>
+              <p className={styles.metadata__value}>{genres}</p>
+            </span>
+            <span className={styles.metadata__props}>
+              <p className={styles.metadata__name}>Pages</p>
+              <p className={styles.metadata__value}>{num_pages}</p>
+            </span>
+            <span className={styles.metadata__props}>
+              <p className={styles.metadata__name}>Format</p>
+              <p className={styles.metadata__value}>{format}</p>
             </span>
           </div>
 
           <div className={styles.detail__sponsor}>
-            <span className={styles.sponsor__merk}>
+            <a
+              href="https://www.amazon.com/"
+              className={styles.sponsor__merk}
+              target="_blank"
+            >
               <box-icon type="logo" name="amazon" color="#FF9900"></box-icon>
               <p>
                 Get it on
                 <br />
                 Amazon.com
               </p>
-            </span>
-            <span className={styles.sponsor__merk}>
+            </a>
+            <a
+              href="https://www.apple.com/apple-books/"
+              className={styles.sponsor__merk}
+              target="_blank"
+            >
               <box-icon name="apple" type="logo" color="white"></box-icon>
               <p>
                 Get it on <br />
                 Apple Books
               </p>
-            </span>
+            </a>
           </div>
         </div>
       </div>
