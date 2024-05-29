@@ -19,27 +19,51 @@ const Books = () => {
     fetchData();
   }, []);
 
+  const [search, setSearch] = useState("");
+
+  const searchItem = (e) => {
+    // console.log(e.target.value);
+    setSearch(e.target.value);
+  };
+
   return (
     <div className={styles.books}>
-      <h1>Featured Books</h1>
+      <span className={styles.books__title}>
+        <h1>Featured Books</h1>
+        <div className={styles.books__search}>
+          <box-icon name="search" color="var(--primary-color)"></box-icon>
+          <input
+            type="text"
+            className={styles.search__input}
+            placeholder="Search your book"
+            onChange={searchItem}
+          />
+        </div>
+      </span>
       <div className={styles.book__section}>
-        {books.map((book) => {
-          return (
-            <>
-              <Link
-                to={`/pages/detail/${book.id}`}
-                className={styles.book__link}
-              >
-                <Book
-                  key={book.id}
-                  title={book.title}
-                  author={book.authors}
-                  image={book.image_url}
-                />
-              </Link>
-            </>
-          );
-        })}
+        {books
+          .filter((item) => {
+            return search.toLowerCase() === ""
+              ? item
+              : item.title.toLowerCase().includes(search);
+          })
+          .map((book) => {
+            return (
+              <>
+                <Link
+                  to={`/pages/detail/${book.id}`}
+                  className={styles.book__link}
+                >
+                  <Book
+                    key={book.id}
+                    title={book.title}
+                    author={book.authors}
+                    image={book.image_url}
+                  />
+                </Link>
+              </>
+            );
+          })}
       </div>
     </div>
   );

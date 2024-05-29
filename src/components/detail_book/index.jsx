@@ -62,7 +62,6 @@ const DetailBook = () => {
             >
               {isOpen ? `Read Less` : `Read More`}
             </button>
-            <box-icon name="heart" size="md" color="#d60841"></box-icon>
           </span>
 
           <div className={styles.detail__metadata}>

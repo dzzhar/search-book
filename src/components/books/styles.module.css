@@ -2,10 +2,36 @@
   color: var(--primary-color);
 }
 
+.books__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
 .books h1 {
   font-size: 2rem;
   font-weight: normal;
-  margin-bottom: 2rem;
+}
+
+.books__search {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--primary-color);
+  height: 3rem;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  padding-inline: 1rem;
+}
+
+.search__input {
+  border: none;
+  font-size: 1rem;
+}
+
+.search__input:focus {
+  outline: none;
+  color: var(--primary-color);
 }
 
 .book__section {

@@ -29,9 +29,8 @@ const Navbar = () => {
           }`}
         >
           <List list="home" to="/" />
-          <List list="about" to="/pages/about" />
           <List list="books" to="/pages/books" />
-          <List list="my favorite" to="/pages/favorite" />
+          <List list="about" to="/pages/about" />
         </div>
       </div>
     </>
