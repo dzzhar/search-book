@@ -26,4 +26,8 @@
   .book__link {
     width: 200px;
   }
+
+  .book__section {
+    margin: 0;
+  }
 }

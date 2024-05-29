@@ -35,6 +35,8 @@ const DetailBook = () => {
     image_url,
   } = book;
 
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div>
       <div className={styles.detail}>
@@ -50,7 +52,18 @@ const DetailBook = () => {
               <h2>{rating}</h2>
             </span>
           </div>
-          <h3>{description}</h3>
+          <h3 className={isOpen ? null : `${styles.detail__paragraph}`}>
+            {description}
+          </h3>
+          <span className={styles.detail__action}>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className={styles.detail__button}
+            >
+              {isOpen ? `Read Less` : `Read More`}
+            </button>
+            <box-icon name="heart" size="md" color="#d60841"></box-icon>
+          </span>
 
           <div className={styles.detail__metadata}>
             <span className={styles.metadata__props}>

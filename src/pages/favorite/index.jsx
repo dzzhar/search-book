@@ -2,7 +2,7 @@ import Footer from "../../components/footer";
 import Navbar from "../../components/navbar";
 import Container from "../../container";
 
-const Top = () => {
+const Favorite = () => {
   return (
     <Container>
       <Navbar />
@@ -11,4 +11,4 @@ const Top = () => {
   );
 };
 
-export default Top;
+export default Favorite;

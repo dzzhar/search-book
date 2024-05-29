@@ -17,16 +17,6 @@
   transform: scale(1.05);
 }
 
-.book__like {
-  display: flex;
-  align-items: start;
-  gap: 1rem;
-}
-
-.book__like box-icon {
-  cursor: pointer;
-}
-
 .book h3 {
   font-weight: 600;
   margin-bottom: 0.5rem;

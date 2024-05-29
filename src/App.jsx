@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import Top from "./pages/top";
+import Favorite from "./pages/favorite";
 import Featured from "./pages/books";
 import Home from "./pages/home";
 import About from "./pages/about";
@@ -11,7 +11,7 @@ const App = () => {
       <Route path="/" element={<Home />} />
       <Route path="/pages/about" element={<About />} />
       <Route path="/pages/books" element={<Featured />} />
-      <Route path="/pages/top" element={<Top />} />
+      <Route path="/pages/favorite" element={<Favorite />} />
       <Route path="/pages/detail/:id" element={<Detail />} />
     </Routes>
   );
