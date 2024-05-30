@@ -1,6 +1,5 @@
 .book {
   margin-bottom: 2rem;
-  flex-basis: 45%;
 }
 
 .book img {
@@ -27,18 +26,8 @@
 }
 
 @media (min-width: 768px) {
-  .book {
-    flex-basis: 25%;
-  }
-
   .book img {
     width: 200px;
     height: 300px;
-  }
-}
-
-@media (min-width: 992px) {
-  .book {
-    flex-basis: 20%;
   }
 }

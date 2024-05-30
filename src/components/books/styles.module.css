@@ -48,6 +48,19 @@
   width: 180px;
 }
 
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.pagination button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 @media (min-width: 768px) {
   .book__link {
     width: 200px;
