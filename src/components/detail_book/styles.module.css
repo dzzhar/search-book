@@ -7,6 +7,7 @@
 .detail img {
   margin-bottom: 4rem;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  width: 40%;
 }
 
 .detail h1 {
@@ -105,6 +106,11 @@
     width: 70%;
     margin: auto;
   }
+
+  .detail img {
+    width: 60%;
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: 992px) {
@@ -114,6 +120,7 @@
     text-align: start;
     gap: 6rem;
     justify-content: center;
+    margin-block: 5rem;
   }
 
   .detail__image {
