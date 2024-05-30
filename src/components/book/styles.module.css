@@ -1,11 +1,12 @@
 .book {
   margin-bottom: 2rem;
+  flex-basis: 45%;
 }
 
 .book img {
   margin-bottom: 1rem;
-  width: 180px;
-  height: 280px;
+  width: 150px;
+  height: 240px;
   object-fit: fill;
   transition: transform 0.3s ease;
   cursor: pointer;

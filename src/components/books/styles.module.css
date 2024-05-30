@@ -7,6 +7,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 3rem;
+  width: 100%;
 }
 
 .books h1 {
@@ -26,7 +27,7 @@
 
 .search__input {
   border: none;
-  font-size: 1rem;
+  width: 100%;
 }
 
 .search__input:focus {
@@ -38,14 +39,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 5rem;
   gap: 1rem;
+  width: 100%;
 }
 
 .book__link {
   text-decoration: none;
   color: var(--primary-color);
-  width: 180px;
+  width: 150px;
 }
 
 .pagination {

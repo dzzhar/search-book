@@ -83,7 +83,6 @@
 .detail__sponsor {
   display: flex;
   text-align: start;
-  gap: 1rem;
   justify-content: center;
   font-size: 0.8rem;
   padding-top: 1rem;
@@ -164,5 +163,9 @@
 
   .detail__action {
     justify-content: start;
+  }
+
+  .detail__action button {
+    cursor: pointer;
   }
 }
