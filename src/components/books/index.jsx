@@ -57,7 +57,7 @@ const Books = () => {
       <div className={styles.book__section}>
         {currentItems.map((book) => (
           <Link
-            to={`/pages/detail/${book.id}`}
+            to={`/detail/${book.id}`}
             className={styles.book__link}
             key={book.id}
           >

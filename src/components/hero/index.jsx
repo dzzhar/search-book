@@ -43,7 +43,7 @@ const Hero = () => {
         <h1 className={styles.left__sub}>
           Read More and Make Success the Result of Perfection.
         </h1>
-        <Link to="/pages/books">
+        <Link to="/books">
           <button className={styles.left__button}>explore</button>
         </Link>
       </div>
